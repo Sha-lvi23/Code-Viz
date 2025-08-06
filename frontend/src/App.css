@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; 
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #262626;
+  font-size: 1.8em;
+}
+
+.app-header p {
+  margin: 5px 0 15px 0;
+  color: #8c8c8c;
+}
+
+.controls .button {
+  background-color: #1890ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.controls .button:hover {
+  background-color: #40a9ff;
+}
+
+.controls .button.disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 10px;
+  color: #595959;
+  min-height: 20px;
+}
+
+.graph-container {
+  flex-grow: 1;
+}
+
+
+.insight-panel {
+  width: 350px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-left: 1px solid #d9d9d9;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.06);
+  overflow-y: auto;
+  transition: width 0.3s ease-in-out;
+}
+
+.insight-panel h3 {
+  margin-top: 0;
+  color: #1890ff;
+  border-bottom: 2px solid #1890ff;
+  padding-bottom: 10px;
+  word-break: break-all;
+}
+
+.insight-panel .panel-section {
+  margin-bottom: 25px;
+}
+
+.insight-panel h4 {
+  margin-bottom: 5px;
+  color: #262626;
+}
+
+.insight-panel p {
+  font-size: 0.9em;
+  color: #8c8c8c;
+  margin-top: 0;
+}
+
+.insight-panel ul {
+  list-style-type: none;
+  padding-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.insight-panel li {
+  background-color: #f0f2f5;
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #8c8c8c;
+}
+
+
+/* --- Node Styling --- */
+.react-flow__node.cycle-node {
+  border-color: #ff4d4f;
+  border-width: 2px;
+  background-color: #fff1f0;
+  color: #cf1322;
+}
+
+.react-flow__node.cycle-node .react-flow__handle {
+  background: #ff4d4f;
+}
